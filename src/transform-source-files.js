@@ -1,9 +1,11 @@
 const unified = require('unified')
+const gfm = require('remark-gfm')
 const remarkParse = require('remark-parse')
 const remarkRehype = require('remark-rehype')
 const rehypeStringify = require('rehype-stringify')
 const wikiLinkPlugin = require('remark-wiki-link').wikiLinkPlugin
 const linksPluginFactory = require('./links-plugin')
+
 
 
 module.exports = function (source) {
@@ -14,6 +16,7 @@ module.exports = function (source) {
   files.map((file) => {
     let mdastTree = unified()
       .use(remarkParse)
+      .use(gfm)
       .use(wikiLinkPlugin, {
         hrefTemplate: (permalink) => `/${permalink}`,
       })
