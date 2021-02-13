@@ -18,4 +18,4 @@ const options = program.opts();
 
 let source = loadSourceFiles(options.input, options.glob);
 let result = transformSourceFiles(source);
-saveSourceFiles(result, options.output);
+saveSourceFiles(result, options.output, options.template);

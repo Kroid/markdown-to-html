@@ -9,7 +9,7 @@ module.exports = function (files, outputDir, templatePath) {
 
   if (templatePath) {
     const absTeplatePath = path.resolve(templatePath)
-    templateContent = fs.readFileSync(filepath, { encoding: 'utf8' });
+    templateContent = fs.readFileSync(absTeplatePath, { encoding: 'utf8' });
   } else {
     templateContent = defaultTemplateContent
   }
