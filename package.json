@@ -21,8 +21,5 @@
     "remark-wiki-link": "^1.0.2",
     "unified": "^9.2.0",
     "unist-util-visit": "^2.0.3"
-  },
-  "devDependencies": {
-    "node-json-color-stringify": "^1.1.0"
   }
 }
