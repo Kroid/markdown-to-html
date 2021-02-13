@@ -1,0 +1,28 @@
+{
+  "name": "markdown-to-html",
+  "version": "0.0.1",
+  "main": "cli.js",
+  "bin": {
+    "markdown-to-html": "./cli.js"
+  },
+  "author": "Kroid <kroid@yandex.ru>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kroid/markdown-to-html.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^7.0.0",
+    "glob": "^7.1.6",
+    "handlebars": "^4.7.6",
+    "rehype-stringify": "^8.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.0.0",
+    "remark-wiki-link": "^1.0.2",
+    "unified": "^9.2.0",
+    "unist-util-visit": "^2.0.3"
+  },
+  "devDependencies": {
+    "node-json-color-stringify": "^1.1.0"
+  }
+}
