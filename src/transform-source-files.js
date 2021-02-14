@@ -1,5 +1,7 @@
 const unified = require('unified')
 const gfm = require('remark-gfm')
+const toc = require('remark-toc')
+const slug = require('remark-slug')
 const remarkParse = require('remark-parse')
 const remarkRehype = require('remark-rehype')
 const rehypeStringify = require('rehype-stringify')
@@ -22,7 +24,7 @@ module.exports = function (source) {
       })
       .parse(source[file]);
 
-    mdastTree = unified().use(linksPlugin).runSync(mdastTree);
+    mdastTree = unified().use(slug).use(toc).use(linksPlugin).runSync(mdastTree);
 
     let hastTree = unified().use(remarkRehype).runSync(mdastTree);
     let html = unified().use(rehypeStringify).stringify(hastTree);
